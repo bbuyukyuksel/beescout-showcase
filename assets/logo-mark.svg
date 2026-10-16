@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" color="#FFB800" role="img" aria-labelledby="title">
+  <title id="title">BeeScout</title>
+  <!-- BeeScout logo mark: compass rose whose north needle is a scout bee.
+       Single source for full color (default amber via the root `color`)
+       and single color (override `color` in CSS; all fills use currentColor). -->
+  <defs>
+    <mask id="cutouts">
+      <rect width="100" height="100" fill="#fff"/>
+      <!-- bee abdomen stripes -->
+      <rect x="45" y="30.4" width="10" height="0.7" fill="#000"/>
+      <rect x="45" y="31.9" width="10" height="0.7" fill="#000"/>
+      <!-- gap ring around the compass hub -->
+      <circle cx="50" cy="50" r="5.9" fill="#000"/>
+    </mask>
+    <path id="ray" d="M32.6 32.6 L44.6 40.6 L40.6 44.6 Z"/>
+  </defs>
+  <g fill="currentColor">
+    <!-- outer ring -->
+    <circle cx="50" cy="50" r="36.4" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    <g mask="url(#cutouts)">
+      <!-- diagonal rays -->
+      <use xlink:href="#ray"/>
+      <use xlink:href="#ray" transform="translate(100 0) scale(-1 1)"/>
+      <use xlink:href="#ray" transform="translate(0 100) scale(1 -1)"/>
+      <use xlink:href="#ray" transform="rotate(180 50 50)"/>
+      <!-- east-west needle -->
+      <path d="M16.8 50 L50 45.2 L83.2 50 L50 54.8 Z"/>
+      <!-- south needle -->
+      <path d="M45.4 50 L50 82.2 L54.6 50 Z"/>
+      <!-- north needle: bee stalk, abdomen, thorax dome -->
+      <path d="M45.6 50 L46.8 34 L53.2 34 L54.4 50 Z"/>
+      <rect x="45.9" y="29.6" width="8.2" height="3.6" rx="0.6"/>
+      <path d="M46 29 A4 3.2 0 0 1 54 29 Z"/>
+    </g>
+    <!-- compass hub -->
+    <circle cx="50" cy="50" r="4.3"/>
+    <!-- bee head, antennae, wings -->
+    <circle cx="50" cy="22.9" r="2.4"/>
+    <path d="M48.7 21.2 Q47.5 19 46.1 18.4 M51.3 21.2 Q52.5 19 53.9 18.4" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round"/>
+    <circle cx="45.8" cy="18" r="1"/>
+    <circle cx="54.2" cy="18" r="1"/>
+    <ellipse cx="41.6" cy="25.4" rx="4.8" ry="3.1" transform="rotate(28 41.6 25.4)"/>
+    <ellipse cx="58.4" cy="25.4" rx="4.8" ry="3.1" transform="rotate(-28 58.4 25.4)"/>
+  </g>
+</svg>
